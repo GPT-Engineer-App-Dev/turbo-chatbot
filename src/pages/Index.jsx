@@ -17,8 +17,8 @@ const Index = () => {
     if (!prompt) return;
 
     const messages = [{ role: "user", content: prompt }];
-    const response = await create({ messages, model: "gpt-3.5-turbo" });
-    setResponse(response.data.choices[0].message.content);
+    const apiResponse = await create({ messages, model: "gpt-3.5-turbo" });
+    setResponse(apiResponse.data.choices[0].message.content);
   };
 
   return (
